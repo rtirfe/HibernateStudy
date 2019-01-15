@@ -27,3 +27,5 @@
 
 ## password files ###
 /src/main/resources/prod.properties
+*.properties
+
