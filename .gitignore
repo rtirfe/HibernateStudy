@@ -26,6 +26,4 @@
 /.nb-gradle/
 
 ## password files ###
-/src/main/resources/prod.properties
-*.properties
-
+prod.properties
