@@ -16,4 +16,5 @@ public class AccountService {
     public BigDecimal getBalance(Long id) {
         return repository.getAccount(id).getBalance();
     }
+
 }

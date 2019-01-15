@@ -16,6 +16,9 @@ public class Account {
         this.balance = initialBalance;
     }
 
+    public Account() {
+    }
+
     public Long getId() {
         return id;
     }
