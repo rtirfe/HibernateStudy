@@ -9,14 +9,11 @@ import java.util.List;
 @Entity
 public class Account {
 
-    //TODO change accountId -> AccountId;
     @Id
     private Long accountId;
     private BigDecimal balance;
-
     @OneToMany(mappedBy="account")
     private List<AccountTransaction> accountTransactions;
-
 
     public Account() {
     }
@@ -25,7 +22,6 @@ public class Account {
         this.accountId = accoundId;
         this.balance = initialBalance;
     }
-
 
     public Long getAccountId() {
         return accountId;
@@ -50,6 +46,5 @@ public class Account {
     public void setAccountTransactions(List<AccountTransaction> accountTransactions) {
         this.accountTransactions = accountTransactions;
     }
-
 
 }

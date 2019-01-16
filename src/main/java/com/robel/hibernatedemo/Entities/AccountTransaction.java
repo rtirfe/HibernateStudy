@@ -1,6 +1,5 @@
 package com.robel.hibernatedemo.Entities;
 
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -10,12 +9,18 @@ import javax.persistence.ManyToOne;
 public class AccountTransaction {
     @Id
     private Long transactionId;
-
     @ManyToOne
     @JoinColumn(name="accountId", nullable=false)
     private Account account;
-
     private String description;
+
+    public AccountTransaction() {
+    }
+
+    public AccountTransaction(long id, String description) {
+        this.transactionId = id;
+        this.description = description;
+    }
 
     public Long getTransactionId() {
         return transactionId;
@@ -24,7 +29,6 @@ public class AccountTransaction {
     public void setTransactionId(Long transactionId) {
         this.transactionId = transactionId;
     }
-
 
     public String getDescription() {
         return description;
